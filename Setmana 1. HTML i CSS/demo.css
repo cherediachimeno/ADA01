@@ -1,0 +1,46 @@
+* {
+    color: blue;
+    font-size: 15px;
+}
+
+h1 {
+    color: red !important;
+    border: 3px solid rgb(255, 0, 43);
+    text-align: center;
+}
+
+p {
+    color: red;
+}
+
+h1, p, .cajaOferta, #caja2 {
+  color: green;  
+  font-size: 20px;
+}
+
+div {
+    background-color: darkkhaki;
+}
+
+#caja1 {
+    background-color:aqua;
+}
+
+#caja2 h1 {
+    text-align: left;
+}
+
+.cajaRepetida {
+    background-color: goldenrod;
+}
+
+.cajaRepetida h1 {
+    color: rgb(126, 115, 115);
+    text-align: left;
+}
+
+.cajaOferta h1 {
+    text-align: right;
+}
+
+
