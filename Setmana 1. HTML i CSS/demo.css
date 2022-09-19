@@ -1,46 +1,51 @@
-* {
-    color: blue;
-    font-size: 15px;
+body {
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
-h1 {
-    color: red !important;
-    border: 3px solid rgb(255, 0, 43);
-    text-align: center;
+#avi {
+   /* display: flex; */
 }
 
-p {
-    color: red;
+#pare1 {
+    background-color: skyblue;
+    height: 500px;
+    border: 5px black solid;
+                    /* ACTIVAMOS FLEXBOX Y DE MANERA AUTOMÁTICA
+                    CAMBIAR SU DISPOSICIÓN DE EN BLOQUE A EN LÍNEA */
+    display: flex;
+                    /* INSTRUCCIONES FLEXBOX 
+    /* flex-direction: jugaremos con la orientación de los elementos hijos*/
+                    /* flex-direction: column-reverse;
+                    /* flex-wrap: mantendremos medidas de las cajas. Si no caben, saltan a la línea siguiente */
+    /* flex-wrap: wrap;
+                    /* SIMPLIFICAREMOS CÓDIGO: USAMOS FLEX-FLOW. PRIMER VALOR (FLEX-DIRECTION)
+                    SEGUNDO VALOR (FLEX-WRAP) */
+    flex-flow: row wrap;
+
+                    /* AHORA VEREMOS PROPIEDADES JUSTIFY-CONTENT PARA JUGAR CON LA POSICIÓN
+                    DE LOS ELEMENTOS HIJOS A NIVEL HORIZONTAL */
+    justify-content: space-between;
+                    /* AHORA VEREMOS PROPIEDADES ALIGN-CONTENT PARA JUGAR CON LA POSICIÓN
+                    DE LOS ELEMENTOS HIJOS A NIVEL VERTICAL. 
+                    REQUISITO: INCORPORAR ALTURA (HEIGHT) */
+    align-content: space-around;
 }
 
-h1, p, .cajaOferta, #caja2 {
-  color: green;  
-  font-size: 20px;
+#pare2 {
+    background-color: salmon;
+    border: 5px black solid;
+    width: 300px;
+    height: 300px;
 }
 
-div {
-    background-color: darkkhaki;
+.fill {
+    border: 0.5px black solid;
+    width: 100px;
+    height: 100px;
+
 }
 
-#caja1 {
-    background-color:aqua;
+.caja2 {
+    align-self: flex-end;
 }
-
-#caja2 h1 {
-    text-align: left;
-}
-
-.cajaRepetida {
-    background-color: goldenrod;
-}
-
-.cajaRepetida h1 {
-    color: rgb(126, 115, 115);
-    text-align: left;
-}
-
-.cajaOferta h1 {
-    text-align: right;
-}
-
-
