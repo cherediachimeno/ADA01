@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>
+        HTML DOM Form Object
+    </title>
+</head>
+ 
+<body style="text-align:center;">
+ 
+    <h1 style="color:green;"> 
+            CodeOp
+        </h1>
+ 
+    <h2>DOM Form Object</h2>
+ 
+    <form align="center"
+          id="myForm"
+          method="GET"
+          target="_blank"
+          action="/action_page.php">
+        First name:
+        <br>
+        <input type="text"
+               name="fname"
+               placeholder="FName">
+        <br>
+        <br> Last name:
+        <br>
+        <input type="text"
+               name="lname"
+               placeholder="LName">
+        <br>
+        <br>
+    </form>
+    <button onclick="enviarInfo()">
+        Submit
+    </button>
+    <p id="Geek_p"
+       style="color:green;
+              font-size:30px;">
+    </p>
+ 
+    <script>
+        function enviarInfo() {
+           
+            //  Accessing form.
+            var txt = document.getElementById(
+              "myForm").target;
+           
+           
+            document.getElementById(
+              "Geek_p").innerHTML = txt;
+        }
+    </script>
+</body>
+ 
+</html>

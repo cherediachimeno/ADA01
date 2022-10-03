@@ -1,5 +1,5 @@
 // SEGUINT LES DIAPOSITIVES...
-
+/*
 let producte1 = 10.95;
 let producte2 = 19.95;
 let producte3 = 100.95;
@@ -35,4 +35,23 @@ function sumaIVA (a, b) {
     let calculoIVA = (a + b) * iva;
     let total = (a + b) + calculoIVA;
     return total;
+}*/
+
+
+console.log(multiplicarPorCinco1(100));
+
+let grabandoVariable = multiplicarPorCinco2(100, 100);
+
+console.log(grabandoVariable);
+
+function multiplicarPorCinco1(x) {
+
+    return x * 5;
+
+}
+
+function multiplicarPorCinco2(x, x) {
+
+    return (x + x) * 5;
+
 }
