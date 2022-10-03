@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        HTML DOM form elements Collection
+    </title>
+</head>
+
+<body>
+    <center>
+        <h2>CodeOp</h2>
+        <p><b>DOM form elements collection values</b></p>
+
+
+
+        <form action="#" method="post" autocomplete="on">
+
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="Username">
+            <br>
+
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="Password"><br>
+        </form>
+
+        <button onclick="click1()">Submit</button>
+        <p id="paraID"></p>
+
+
+    </center>
+
+    <!-- Script to display value of
+        input field of input -->
+    <script>
+        function click1() {
+            let valueName = document.getElementById(
+                "Username").value;
+            document.getElementById("paraID")
+                .innerHTML = valueName;
+
+
+        }
+    </script>
+</body>
+
+</html>
