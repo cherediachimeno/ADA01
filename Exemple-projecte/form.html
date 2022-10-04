@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exemple de DOM aplicat al projecte de CodeOp</title>
+    <link rel="stylesheet" href="./demo.css">
+</head>
+
+<body>
+    <center>
+        <h2>CodeOp</h2>
+        <p><b>Exemple de DOM aplicat al projecte de CodeOp</b></p>
+        <p id="imprimir">
+                <!-- Aquí imprimim les dades des del JavaScript-->
+        </p>
+
+        <form action="#" method="post" autocomplete="on">
+
+            <label for="img">Enllaç de l'imatge:</label>
+            <input type="text" name="img" id="img">
+            <br>
+
+        </form>
+        <button onclick="click1()">Submit</button>
+
+        <button onclick="gridCreation()">Grid</button>
+    </center>
+
+    <!-- Script to display value of
+        input field of input -->
+    <script>
+        function click1() {
+            // 1º PAS. AGAFEM EL QUE L'USUARI HA ESCRIT AL ID IMG.
+            // AQUESTA INFORMACIÓ LA DESEM A LA VARIABLE valorUsuari
+            let valorUsuari = document.getElementById(
+                "img").value; 
+            
+            // 2º PAS. IMPRIMIR PER PANTALLA EL QUE NOSALTRES VOLGUEM. EN AQUEST CAS
+            // UNA IMATGE AMB UN ENLLAÇ. L'ENLLAÇ SERÀ EL VALOR QUE L'USUARI ENS HA 
+            // DONAT. 
+            document.getElementById("imprimir")
+                .innerHTML += `
+                <img alt="imatge mal carregada" onclick="mesInfo()" src="${valorUsuari}"
+                width=500" height="500">
+                `;
+        }
+
+        // FUNCIÓ AMB GRID, NO CAL PEL PROJECTE DE MOMENT!! 
+
+        function gridCreation() {
+            //1º PAS. DESAR INFORMACIÓ ESCRITA PER L'USUARI AL FORMULARI.
+            let valueName = document.getElementById(
+                "img").value;
+            //2º PAS. IMPRIMIR AQUESTA INFORMACIÓ
+            document.getElementById("imprimir")
+                .innerHTML += `
+                <div class="grid-container">
+                    <div class="grid-item box1">
+                        <a href="https://codeop.tech/">
+                        <img id="imagen" alt="Qries" src="${valueName}">
+                    </div>
+                    <div class="grid-item">2</div>
+                    <div class="grid-item">3</div>  
+                    <div class="grid-item">4</div>
+                    <div class="grid-item">5</div>
+                    <div class="grid-item">6</div>  
+                    <div class="grid-item">7</div>
+                    <div class="grid-item">8</div>
+                    <div class="grid-item">9</div>  
+                </div>
+                `;
+        }
+
+        function mesInfo(){
+            window.alert("element clicat");
+        }
+    </script>
+</body>
+
+</html>
